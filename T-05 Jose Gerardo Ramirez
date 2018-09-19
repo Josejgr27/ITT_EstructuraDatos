@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace T_05_Jose_Gerardo_Ramirez
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DateTime inicio = DateTime.Now;
+            int suma = 0;
+            for (int c = 0; c <= 1000000; c++)
+            {              
+                suma = suma + c;
+               
+            }
+            Console.WriteLine("La suma de los numero desde el 0 hasta el 1,000,000 es igual a: {0}", suma);
+            DateTime final = DateTime.Now; // Busque este codigo en internet porque no encontre el tiempo de ejecucion.
+            TimeSpan duracion = final - inicio;
+            double segundosTotales = duracion.TotalSeconds;
+            Console.WriteLine("El programa duro {0} segundos", segundosTotales);
+            Console.ReadKey();
+        }
+    }
+}
